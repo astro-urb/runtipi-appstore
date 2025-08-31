@@ -1,0 +1,29 @@
+{
+  "services": [
+    {
+      "name": "filebrowser",
+      "image": "filebrowser/filebrowser:latest",
+      "isMain": true,
+      "internalPort": 80,
+      "command": "/filebrowser --database /database/filebrowser.db --username ${FILEBROWSER_USERNAME} --password ${FILEBROWSER_PASSWORD}",
+      "environment": {
+        "PUID": "1000",
+        "PGID": "1000"
+      },
+      "volumes": [
+        {
+          "hostPath": "${ROOT_FOLDER_HOST}",
+          "containerPath": "/srv"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/database",
+          "containerPath": "/database"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/config",
+          "containerPath": "/config"
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,15 @@
 {
   "name": "FileBrowser Fixed",
   "available": true,
-  "exposable": true,
   "port": 8094,
+  "exposable": true,
+  "dynamic_config": true,
   "id": "filebrowser-fixed",
-  "tipi_version": 1,
+  "description": "Web file manager with working authentication - fixed version",
+  "tipi_version": 3,
   "version": "2.27.0",
   "categories": ["storage", "utilities"],
-  "description": "FileBrowser with working authentication - lightweight web file manager with a clean interface",
-  "short_desc": "Web File Manager (Fixed Auth Version)",
+  "short_desc": "Web File Manager with fixed authentication",
   "author": "FileBrowser",
   "source": "https://github.com/filebrowser/filebrowser",
   "website": "https://filebrowser.org",
@@ -23,7 +24,7 @@
       "env_variable": "FILEBROWSER_USERNAME"
     },
     {
-      "type": "password", 
+      "type": "password",
       "label": "Admin Password",
       "hint": "Password for admin account (min 8 characters)",
       "required": true,
@@ -40,5 +41,7 @@
       "env_variable": "ROOT_FOLDER_HOST"
     }
   ],
-  "supported_architectures": ["amd64", "arm64", "armv7"]
+  "supported_architectures": ["arm64", "amd64", "armv7"],
+  "created_at": 1700000000000,
+  "updated_at": 1700000000000
 }
