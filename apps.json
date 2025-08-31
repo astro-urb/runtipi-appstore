@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "id": "seafile",
+      "available": true
+    },
+    {
+      "id": "filebrowser-fixed", 
+      "available": true
+    }
+  ]
+}
