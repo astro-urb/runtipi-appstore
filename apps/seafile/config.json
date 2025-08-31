@@ -1,0 +1,34 @@
+{
+  "name": "Seafile",
+  "available": true,
+  "exposable": true,
+  "port": 8234,
+  "id": "seafile",
+  "tipi_version": 1,
+  "version": "11.0.12",
+  "categories": ["storage", "productivity"],
+  "description": "Reliable and high performance file sync and share solution with mobile and desktop clients",
+  "short_desc": "Self-hosted file sync & share solution like Dropbox",
+  "author": "Seafile Ltd.",
+  "source": "https://github.com/haiwen/seafile",
+  "website": "https://www.seafile.com",
+  "form_fields": [
+    {
+      "type": "email",
+      "label": "Admin Email",
+      "hint": "Email address for the admin account",
+      "placeholder": "admin@example.com",
+      "required": true,
+      "env_variable": "SEAFILE_ADMIN_EMAIL"
+    },
+    {
+      "type": "password",
+      "label": "Admin Password",
+      "hint": "Password for the admin account (min 8 characters)",
+      "required": true,
+      "min": 8,
+      "env_variable": "SEAFILE_ADMIN_PASSWORD"
+    }
+  ],
+  "supported_architectures": ["amd64", "arm64"]
+}

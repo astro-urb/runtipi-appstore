@@ -1,0 +1,26 @@
+{
+  "description": "Seafile is an open source file sync&share solution designed for high reliability, performance and productivity. Sync, share and collaborate across devices and teams.",
+  "features": [
+    "File syncing and sharing",
+    "Mobile and desktop clients",
+    "Version control",
+    "File locking",
+    "Online file editing",
+    "Full text file search"
+  ],
+  "screenshots": [
+    "https://www.seafile.com/media/img/seafile-desktop-client.png",
+    "https://www.seafile.com/media/img/seafile-web-interface.png"
+  ],
+  "logo": "https://www.seafile.com/media/img/seafile-logo.png",
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://manual.seafile.com/"
+    },
+    {
+      "label": "Desktop/Mobile Clients",
+      "url": "https://www.seafile.com/en/download/"
+    }
+  ]
+}

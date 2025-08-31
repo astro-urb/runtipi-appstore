@@ -1,0 +1,44 @@
+{
+  "name": "FileBrowser Fixed",
+  "available": true,
+  "exposable": true,
+  "port": 8094,
+  "id": "filebrowser-fixed",
+  "tipi_version": 1,
+  "version": "2.27.0",
+  "categories": ["storage", "utilities"],
+  "description": "FileBrowser with working authentication - lightweight web file manager with a clean interface",
+  "short_desc": "Web File Manager (Fixed Auth Version)",
+  "author": "FileBrowser",
+  "source": "https://github.com/filebrowser/filebrowser",
+  "website": "https://filebrowser.org",
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Admin Username",
+      "hint": "Username for admin account",
+      "placeholder": "admin",
+      "default": "admin",
+      "required": true,
+      "env_variable": "FILEBROWSER_USERNAME"
+    },
+    {
+      "type": "password", 
+      "label": "Admin Password",
+      "hint": "Password for admin account (min 8 characters)",
+      "required": true,
+      "min": 8,
+      "env_variable": "FILEBROWSER_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Root Folder Path",
+      "hint": "Host path to browse (e.g., /home/user/files)",
+      "placeholder": "/home/user/files",
+      "default": "/home",
+      "required": true,
+      "env_variable": "ROOT_FOLDER_HOST"
+    }
+  ],
+  "supported_architectures": ["amd64", "arm64", "armv7"]
+}
