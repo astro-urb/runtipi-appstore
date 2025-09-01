@@ -1,0 +1,60 @@
+{
+  "name": "Supabase",
+  "available": true,
+  "port": 8000,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "supabase",
+  "description": "The open source Firebase alternative with instant APIs, Edge Functions, realtime subscriptions, authentication, and storage",
+  "tipi_version": 3,
+  "version": "latest",
+  "categories": ["database", "development", "storage"],
+  "short_desc": "Open source Firebase alternative",
+  "author": "Supabase",
+  "source": "https://github.com/supabase/supabase",
+  "website": "https://supabase.com",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "JWT Secret",
+      "hint": "Secret key for JWT token generation (auto-generated secure secret)",
+      "min": 64,
+      "env_variable": "JWT_SECRET"
+    },
+    {
+      "type": "random",
+      "label": "Database Password", 
+      "hint": "Password for PostgreSQL database (auto-generated secure password)",
+      "min": 32,
+      "env_variable": "POSTGRES_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Dashboard Username",
+      "hint": "Username for Supabase Studio dashboard",
+      "placeholder": "admin",
+      "default": "admin",
+      "required": true,
+      "env_variable": "DASHBOARD_USERNAME"
+    },
+    {
+      "type": "password",
+      "label": "Dashboard Password",
+      "hint": "Password for Supabase Studio dashboard (min 8 characters)",
+      "required": true,
+      "min": 8,
+      "env_variable": "DASHBOARD_PASSWORD"
+    },
+    {
+      "type": "email",
+      "label": "SMTP Email (Optional)",
+      "hint": "Email for sending authentication emails",
+      "placeholder": "noreply@yourdomain.com",
+      "required": false,
+      "env_variable": "SMTP_USER"
+    }
+  ],
+  "supported_architectures": ["amd64", "arm64"],
+  "created_at": 1700000000000,
+  "updated_at": 1700000000000
+}
