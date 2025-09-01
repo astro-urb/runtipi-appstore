@@ -1,0 +1,20 @@
+{
+  "name": "Test App",
+  "available": true,
+  "port": 9999,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "testapp",
+  "description": "Simple test app",
+  "tipi_version": 3,
+  "version": "1.0.0",
+  "categories": ["utilities"],
+  "short_desc": "Test",
+  "author": "Test",
+  "source": "https://github.com/nginx/nginx",
+  "website": "https://nginx.com",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1700000000000,
+  "updated_at": 1700000000000
+}

@@ -1,0 +1,10 @@
+{
+  "services": [
+    {
+      "name": "nginx",
+      "image": "nginx:alpine",
+      "isMain": true,
+      "internalPort": 80
+    }
+  ]
+}

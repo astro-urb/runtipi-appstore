@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Seafile",
+    "available": true,
+    "port": 8234,
+    "exposable": true,
+    "dynamic_config": true,
+    "id": "seafile",
+    "description": "Professional file sync and share solution with mobile and desktop clients",
+    "tipi_version": 3,
+    "version": "11.0.12",
+    "categories": ["storage", "productivity"],
+    "short_desc": "Self-hosted file sync & share like Dropbox",
+    "author": "Seafile Ltd.",
+    "source": "https://github.com/haiwen/seafile",
+    "website": "https://www.seafile.com",
+    "form_fields": [
+      {
+        "type": "email",
+        "label": "Admin Email",
+        "hint": "Email address for the admin account",
+        "placeholder": "admin@example.com",
+        "required": true,
+        "env_variable": "SEAFILE_ADMIN_EMAIL"
+      },
+      {
+        "type": "password",
+        "label": "Admin Password",
+        "hint": "Password for the admin account (min 8 characters)",
+        "required": true,
+        "min": 8,
+        "env_variable": "SEAFILE_ADMIN_PASSWORD"
+      }
+    ],
+    "supported_architectures": ["arm64", "amd64"],
+    "created_at": 1700000000000,
+    "updated_at": 1700000000000
+  },
+  {
+    "name": "FileBrowser Fixed",
+    "available": true,
+    "port": 8094,
+    "exposable": true,
+    "dynamic_config": true,
+    "id": "filebrowser-fixed",
+    "description": "Web file manager with working authentication - fixed version",
+    "tipi_version": 3,
+    "version": "2.27.0",
+    "categories": ["storage", "utilities"],
+    "short_desc": "Web File Manager with fixed authentication",
+    "author": "FileBrowser",
+    "source": "https://github.com/filebrowser/filebrowser",
+    "website": "https://filebrowser.org",
+    "form_fields": [
+      {
+        "type": "text",
+        "label": "Admin Username",
+        "hint": "Username for admin account",
+        "placeholder": "admin",
+        "default": "admin",
+        "required": true,
+        "env_variable": "FILEBROWSER_USERNAME"
+      },
+      {
+        "type": "password",
+        "label": "Admin Password",
+        "hint": "Password for admin account (min 8 characters)",
+        "required": true,
+        "min": 8,
+        "env_variable": "FILEBROWSER_PASSWORD"
+      },
+      {
+        "type": "text",
+        "label": "Root Folder Path",
+        "hint": "Host path to browse (e.g., /home/user/files)",
+        "placeholder": "/home/user/files",
+        "default": "/home",
+        "required": true,
+        "env_variable": "ROOT_FOLDER_HOST"
+      }
+    ],
+    "supported_architectures": ["arm64", "amd64", "armv7"],
+    "created_at": 1700000000000,
+    "updated_at": 1700000000000
+  },
+  {
+    "name": "Test App",
+    "available": true,
+    "port": 9999,
+    "exposable": true,
+    "dynamic_config": true,
+    "id": "testapp",
+    "description": "Simple test app",
+    "tipi_version": 3,
+    "version": "1.0.0",
+    "categories": ["utilities"],
+    "short_desc": "Test",
+    "author": "Test",
+    "source": "https://github.com/nginx/nginx",
+    "website": "https://nginx.com",
+    "form_fields": [],
+    "supported_architectures": ["arm64", "amd64"],
+    "created_at": 1700000000000,
+    "updated_at": 1700000000000
+  }
+]
