@@ -4,7 +4,7 @@
       "name": "seafile",
       "image": "seafileltd/seafile-mc:latest",
       "isMain": true,
-      "internalPort": 80,
+      "internalPort": "80",
       "environment": {
         "DB_HOST": "seafile-db",
         "DB_ROOT_PASSWD": "seafile_root_pw_2024",

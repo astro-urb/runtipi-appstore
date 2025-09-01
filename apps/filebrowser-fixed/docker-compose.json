@@ -4,7 +4,7 @@
       "name": "filebrowser",
       "image": "filebrowser/filebrowser:latest",
       "isMain": true,
-      "internalPort": 80,
+      "internalPort": "80",
       "command": "/filebrowser --database /database/filebrowser.db --username ${FILEBROWSER_USERNAME} --password ${FILEBROWSER_PASSWORD}",
       "environment": {
         "PUID": "1000",

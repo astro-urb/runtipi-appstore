@@ -4,7 +4,7 @@
       "name": "supabase-studio",
       "image": "supabase/studio:20241216-5e5586d",
       "isMain": true,
-      "internalPort": 3000,
+      "internalPort": "3000",
       "environment": {
         "STUDIO_PG_META_URL": "http://supabase-meta:8080",
         "POSTGRES_PASSWORD": "${POSTGRES_PASSWORD}",
@@ -22,7 +22,7 @@
     {
       "name": "supabase-kong",
       "image": "kong:2.8.1",
-      "internalPort": 8000,
+      "internalPort": "8000",
       "environment": {
         "KONG_DATABASE": "off",
         "KONG_DECLARATIVE_CONFIG": "/var/lib/kong/kong.yml",
@@ -43,7 +43,7 @@
     {
       "name": "supabase-auth",
       "image": "supabase/gotrue:v2.155.1",
-      "internalPort": 9999,
+      "internalPort": "9999",
       "environment": {
         "GOTRUE_API_HOST": "0.0.0.0",
         "GOTRUE_API_PORT": "9999",
@@ -71,7 +71,7 @@
     {
       "name": "supabase-rest",
       "image": "postgrest/postgrest:v12.2.0",
-      "internalPort": 3000,
+      "internalPort": "3000",
       "environment": {
         "PGRST_DB_URI": "postgres://authenticator:${POSTGRES_PASSWORD}@supabase-db:5432/postgres",
         "PGRST_DB_SCHEMAS": "public,storage,graphql_public",
@@ -86,7 +86,7 @@
     {
       "name": "supabase-realtime",
       "image": "supabase/realtime:v2.30.23",
-      "internalPort": 4000,
+      "internalPort": "4000",
       "environment": {
         "PORT": "4000",
         "DB_HOST": "supabase-db",
@@ -109,7 +109,7 @@
     {
       "name": "supabase-storage",
       "image": "supabase/storage-api:v1.11.4",
-      "internalPort": 5000,
+      "internalPort": "5000",
       "environment": {
         "ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0",
         "SERVICE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU",
@@ -136,7 +136,7 @@
     {
       "name": "supabase-imgproxy",
       "image": "darthsim/imgproxy:v3.8.0",
-      "internalPort": 5001,
+      "internalPort": "5001",
       "environment": {
         "IMGPROXY_BIND": "0.0.0.0:5001",
         "IMGPROXY_LOCAL_FILESYSTEM_ROOT": "/",
@@ -154,7 +154,7 @@
     {
       "name": "supabase-meta",
       "image": "supabase/postgres-meta:v0.84.2",
-      "internalPort": 8080,
+      "internalPort": "8080",
       "environment": {
         "PG_META_PORT": "8080",
         "PG_META_DB_HOST": "supabase-db",
@@ -168,7 +168,7 @@
     {
       "name": "supabase-db",
       "image": "supabase/postgres:15.6.1.117",
-      "internalPort": 5432,
+      "internalPort": "5432",
       "environment": {
         "POSTGRES_HOST": "/var/run/postgresql",
         "PGPORT": "5432",

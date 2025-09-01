@@ -4,7 +4,7 @@
   "available": true,
   "port": 8234,
   "exposable": true,
-  "dynamic": true,
+  "dynamic_config": true,
   "id": "seafile",
   "description": "Professional file sync and share solution with mobile and desktop clients",
   "tipi_version": 11,
@@ -13,7 +13,6 @@
   "short_desc": "Self-hosted file sync & share like Dropbox",
   "author": "Seafile Ltd.",
   "source": "https://github.com/haiwen/seafile",
-  "website": "https://www.seafile.com",
   "form_fields": [
     {
       "type": "email",

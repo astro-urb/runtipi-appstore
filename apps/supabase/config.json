@@ -4,7 +4,7 @@
   "available": true,
   "port": 8000,
   "exposable": true,
-  "dynamic": true,
+  "dynamic_config": true,
   "id": "supabase",
   "description": "The open source Firebase alternative with instant APIs, Edge Functions, realtime subscriptions, authentication, and storage",
   "tipi_version": 14,
@@ -13,7 +13,6 @@
   "short_desc": "Open source Firebase alternative",
   "author": "Supabase",
   "source": "https://github.com/supabase/supabase",
-  "website": "https://supabase.com",
   "form_fields": [
     {
       "type": "random",
