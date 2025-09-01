@@ -1,0 +1,12 @@
+{
+  "name": "runtipi-appstore",
+  "version": "1.0.0",
+  "description": "Custom Runtipi App Store with curated self-hosted applications",
+  "scripts": {
+    "test": "bun test",
+    "validate": "bun test tests/apps.test.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}

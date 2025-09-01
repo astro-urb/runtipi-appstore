@@ -1,62 +1,120 @@
-# 🚀 Astro-URB Runtipi App Store
+# Custom Runtipi App Store
 
-Custom app store for Runtipi with optimized and additional apps for our infrastructure.
+This is a custom app store for [Runtipi](https://runtipi.io/) with curated self-hosted applications.
 
-## 📦 Available Apps
+## Available Apps
 
-### 🌊 Seafile
-**Port:** 8234  
-Professional file sync & share solution with desktop and mobile clients. Like Dropbox but self-hosted!
+- 🐠 **Seafile** - Professional file sync & share solution (like Dropbox)
+- 📁 **FileBrowser Fixed** - Web file manager with working authentication
+- 🗃️ **Supabase** - Open source Firebase alternative with PostgreSQL
+- 🧪 **Test App** - Simple nginx test application
 
-**Features:**
-- Desktop & mobile sync clients
-- File versioning
-- Secure sharing with links
-- Team collaboration
-- End-to-end encryption support
+## How to Use This App Store
 
-### 📁 FileBrowser Fixed
-**Port:** 8094  
-Web-based file manager with working authentication (fixes the login issues in the original Runtipi version).
+### 1. Add to Your Runtipi Instance
 
-**Features:**
-- Clean web interface
-- Working authentication system
-- File upload/download
-- Search functionality
-- Mobile friendly
-- Dark mode support
+In your Runtipi dashboard:
 
-## 🔧 Installation
+1. Go to **Settings** → **App Stores**
+2. Click **Add App Store**
+3. Enter the repository URL: `https://github.com/astro-urb/runtipi-appstore`
+4. Click **Add** and wait for synchronization
 
-### Add this App Store to Runtipi:
-1. Go to Runtipi **Settings** → **App Stores**
-2. Click **"Add App Store"**
-3. Enter URL: `https://github.com/astro-urb/runtipi-appstore`
-4. Save
+### 2. Install Apps
 
-### Install Apps:
-The apps will appear in your regular Runtipi App Store with a badge showing they're from this custom store.
+After adding the app store:
+1. Go to **App Store** in your Runtipi dashboard
+2. You should see the apps from this custom store
+3. Click **Install** on any app you want to use
+4. Configure the required settings during installation
 
-## 📝 App Details
+## App Store Structure
 
-### Seafile
-- **Default Port:** 8234
-- **Setup:** Enter admin email and password during installation
-- **Clients:** Download desktop/mobile clients from within Seafile after installation
+This app store follows the modern Runtipi v4+ format:
 
-### FileBrowser Fixed
-- **Default Port:** 8094  
-- **Setup:** Set admin username/password and root folder during installation
-- **Fixed:** Authentication now works properly (original version has login bugs)
+```
+runtipi-appstore/
+├── apps/
+│   ├── seafile/
+│   │   ├── config.json
+│   │   ├── docker-compose.json
+│   │   └── metadata/
+│   │       ├── description.md
+│   │       └── logo.jpg
+│   ├── filebrowser-fixed/
+│   ├── supabase/
+│   └── testapp/
+├── tests/
+│   └── apps.test.ts
+├── package.json
+└── README.md
+```
 
-## 🛠️ Maintenance
+## Key Features of This App Store
 
-This app store is maintained for Astro-URB internal use. Apps are tested and optimized for our Runtipi environment.
+- ✅ **Modern Format** - Uses Runtipi v4+ dynamic compose format
+- ✅ **Tested** - Automated validation of all app configurations
+- ✅ **Working Authentication** - FileBrowser app has fixed login issues
+- ✅ **Production Ready** - Apps configured for actual use
+- ✅ **Documentation** - Detailed descriptions and setup guides
 
-## 📄 License
+## For Developers
 
-Apps maintain their original licenses. This repository only provides Runtipi-compatible configurations.
+### Testing Locally
 
----
-*For internal use at Astro-URB*
+Install Bun and run the tests:
+
+```bash
+# Install Bun (if not already installed)
+curl -fsSL https://bun.sh/install | bash
+
+# Install dependencies and run tests
+bun install
+bun test
+```
+
+### Adding New Apps
+
+1. Create a new directory in `apps/` with the app name (lowercase, no spaces)
+2. Add required files:
+   - `config.json` - App configuration
+   - `docker-compose.json` - Container definitions  
+   - `metadata/description.md` - App description
+   - `metadata/logo.jpg` or `logo.svg` - App icon
+3. Run tests to validate: `bun test`
+
+### Configuration Requirements
+
+Each app must have:
+- `"dynamic_config": true` in config.json
+- `"tipi_version": 3` for compatibility
+- At least one service with `"isMain": true`
+- Valid JSON formatting (no YAML files)
+
+## Troubleshooting
+
+### Apps Not Showing Up?
+
+1. **Check Repository Access**: Ensure this repository is public
+2. **Verify URL**: Use the exact URL: `https://github.com/astro-urb/runtipi-appstore`
+3. **Update App Store**: In Runtipi settings, click "Update App Stores"
+4. **Clear Cache**: Restart Runtipi or clear the repos cache
+5. **Check Logs**: Look at Runtipi logs for validation errors
+
+### Common Issues
+
+- **Private Repository**: App store repositories must be public
+- **Wrong URL**: Make sure you're using the correct GitHub URL
+- **Old Runtipi Version**: Requires Runtipi v4.0.0+ for custom app stores
+- **Format Errors**: Run `bun test` to check for configuration issues
+
+## Support
+
+If you encounter issues:
+1. Check the [official Runtipi documentation](https://runtipi.io/docs)
+2. Run the validation tests: `bun test`
+3. Open an issue in this repository
+
+## License
+
+Apps in this store retain their original licenses. This app store configuration is MIT licensed.
