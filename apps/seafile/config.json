@@ -1,4 +1,5 @@
 {
+  "$schema": "../schema.json",
   "name": "Seafile",
   "available": true,
   "port": 8234,
@@ -6,7 +7,7 @@
   "dynamic_config": true,
   "id": "seafile",
   "description": "Professional file sync and share solution with mobile and desktop clients",
-  "tipi_version": 3,
+  "tipi_version": 11,
   "version": "11.0.12",
   "categories": ["storage", "productivity"],
   "short_desc": "Self-hosted file sync & share like Dropbox",

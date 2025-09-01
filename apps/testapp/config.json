@@ -1,4 +1,5 @@
 {
+  "$schema": "../schema.json",
   "name": "Test App",
   "available": true,
   "port": 9999,
@@ -6,7 +7,7 @@
   "dynamic_config": true,
   "id": "testapp",
   "description": "Simple test app",
-  "tipi_version": 3,
+  "tipi_version": 10,
   "version": "1.0.0",
   "categories": ["utilities"],
   "short_desc": "Test",

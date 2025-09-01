@@ -1,4 +1,5 @@
 {
+  "$schema": "../schema.json",
   "name": "Qdrant",
   "available": true,
   "port": 6333,
@@ -6,7 +7,7 @@
   "dynamic_config": true,
   "id": "qdrant",
   "description": "Qdrant is a vector similarity search engine that provides a production-ready service with a convenient API to store, search, and manage vectors with additional payload",
-  "tipi_version": 3,
+  "tipi_version": 13,
   "version": "v1.12.5",
   "categories": ["database", "ai-tools", "development"],
   "short_desc": "High-performance vector database for AI applications",

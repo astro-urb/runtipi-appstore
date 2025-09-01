@@ -1,4 +1,5 @@
 {
+  "$schema": "../schema.json",
   "name": "Supabase",
   "available": true,
   "port": 8000,
@@ -6,7 +7,7 @@
   "dynamic_config": true,
   "id": "supabase",
   "description": "The open source Firebase alternative with instant APIs, Edge Functions, realtime subscriptions, authentication, and storage",
-  "tipi_version": 3,
+  "tipi_version": 14,
   "version": "latest",
   "categories": ["database", "development", "storage"],
   "short_desc": "Open source Firebase alternative",
