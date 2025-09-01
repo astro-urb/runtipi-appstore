@@ -4,7 +4,7 @@
   "available": true,
   "port": 8234,
   "exposable": true,
-  "dynamic_config": true,
+  "dynamic": true,
   "id": "seafile",
   "description": "Professional file sync and share solution with mobile and desktop clients",
   "tipi_version": 11,
@@ -18,15 +18,12 @@
     {
       "type": "email",
       "label": "Admin Email",
-      "hint": "Email address for the admin account",
-      "placeholder": "admin@example.com",
       "required": true,
       "env_variable": "SEAFILE_ADMIN_EMAIL"
     },
     {
       "type": "password",
       "label": "Admin Password",
-      "hint": "Password for the admin account (min 8 characters)",
       "required": true,
       "min": 8,
       "env_variable": "SEAFILE_ADMIN_PASSWORD"

@@ -136,7 +136,7 @@
         }
       ]
     },
-    "dynamic_config": {
+    "dynamic": {
       "type": "boolean"
     },
     "created_at": {

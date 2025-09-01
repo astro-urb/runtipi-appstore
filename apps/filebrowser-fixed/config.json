@@ -4,7 +4,7 @@
   "available": true,
   "port": 8094,
   "exposable": true,
-  "dynamic_config": true,
+  "dynamic": true,
   "id": "filebrowser-fixed",
   "description": "Web file manager with working authentication - fixed version",
   "tipi_version": 12,
@@ -18,16 +18,12 @@
     {
       "type": "text",
       "label": "Admin Username",
-      "hint": "Username for admin account",
-      "placeholder": "admin",
-      "default": "admin",
       "required": true,
       "env_variable": "FILEBROWSER_USERNAME"
     },
     {
       "type": "password",
       "label": "Admin Password",
-      "hint": "Password for admin account (min 8 characters)",
       "required": true,
       "min": 8,
       "env_variable": "FILEBROWSER_PASSWORD"
@@ -35,9 +31,6 @@
     {
       "type": "text",
       "label": "Root Folder Path",
-      "hint": "Host path to browse (e.g., /home/user/files)",
-      "placeholder": "/home/user/files",
-      "default": "/home",
       "required": true,
       "env_variable": "ROOT_FOLDER_HOST"
     }

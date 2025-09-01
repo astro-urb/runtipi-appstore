@@ -4,7 +4,7 @@
   "available": true,
   "port": 9999,
   "exposable": true,
-  "dynamic_config": true,
+  "dynamic": true,
   "id": "testapp",
   "description": "Simple test app",
   "tipi_version": 10,
