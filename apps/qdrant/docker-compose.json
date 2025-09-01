@@ -1,0 +1,50 @@
+{
+  "services": [
+    {
+      "name": "qdrant",
+      "image": "qdrant/qdrant:v1.12.5",
+      "isMain": true,
+      "environment": {
+        "QDRANT__SERVICE__API_KEY": "${QDRANT_API_KEY:-}",
+        "QDRANT__SERVICE__ENABLE_TLS": "false",
+        "QDRANT__STORAGE__STORAGE_PATH": "/qdrant/storage",
+        "QDRANT__STORAGE__SNAPSHOTS_PATH": "/qdrant/snapshots",
+        "QDRANT__SERVICE__HTTP_PORT": "6333",
+        "QDRANT__SERVICE__GRPC_PORT": "6334",
+        "QDRANT__LOG_LEVEL": "INFO"
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/storage",
+          "containerPath": "/qdrant/storage"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/snapshots",
+          "containerPath": "/qdrant/snapshots"
+        }
+      ],
+      "ports": [
+        {
+          "containerPort": 6333,
+          "hostPort": "${APP_PORT}",
+          "protocol": "tcp"
+        },
+        {
+          "containerPort": 6334,
+          "hostPort": 6334,
+          "protocol": "tcp"
+        }
+      ],
+      "restart": "unless-stopped",
+      "healthCheck": {
+        "test": ["CMD", "curl", "-f", "http://localhost:6333/"],
+        "interval": "30s",
+        "timeout": "10s",
+        "retries": 3,
+        "startPeriod": "10s"
+      },
+      "memoryLimit": "2048M",
+      "cpuLimit": "2"
+    }
+  ]
+}

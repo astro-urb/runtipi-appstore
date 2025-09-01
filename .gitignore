@@ -13,6 +13,7 @@ build/
 Thumbs.db
 
 # Deprecated files
+.deprecated/
 *.deprecated
 *.backup
 *.old

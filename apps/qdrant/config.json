@@ -1,0 +1,52 @@
+{
+  "name": "Qdrant",
+  "available": true,
+  "port": 6333,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "qdrant",
+  "description": "Qdrant is a vector similarity search engine that provides a production-ready service with a convenient API to store, search, and manage vectors with additional payload",
+  "tipi_version": 3,
+  "version": "v1.12.5",
+  "categories": ["database", "ai-tools", "development"],
+  "short_desc": "High-performance vector database for AI applications",
+  "author": "Qdrant",
+  "source": "https://github.com/qdrant/qdrant",
+  "website": "https://qdrant.tech",
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "API Key",
+      "hint": "API key for authentication (auto-generated if left empty)",
+      "min": 32,
+      "env_variable": "QDRANT_API_KEY",
+      "required": false
+    },
+    {
+      "type": "boolean",
+      "label": "Enable Authentication",
+      "hint": "Enable API key authentication for security",
+      "default": false,
+      "env_variable": "QDRANT_AUTH_ENABLED"
+    },
+    {
+      "type": "number",
+      "label": "Storage Threshold (MB)",
+      "hint": "Threshold for switching to mmap storage (default: 20000 MB)",
+      "default": 20000,
+      "min": 1000,
+      "max": 100000,
+      "env_variable": "QDRANT_STORAGE_THRESHOLD"
+    },
+    {
+      "type": "boolean",
+      "label": "Enable Web UI",
+      "hint": "Enable the built-in web interface",
+      "default": true,
+      "env_variable": "QDRANT_WEB_UI_ENABLED"
+    }
+  ],
+  "supported_architectures": ["amd64", "arm64"],
+  "created_at": 1700000000000,
+  "updated_at": 1700000000000
+}

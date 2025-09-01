@@ -7,6 +7,7 @@ This is a custom app store for [Runtipi](https://runtipi.io/) with curated self-
 - 🐠 **Seafile** - Professional file sync & share solution (like Dropbox)
 - 📁 **FileBrowser Fixed** - Web file manager with working authentication
 - 🗃️ **Supabase** - Open source Firebase alternative with PostgreSQL
+- 🔍 **Qdrant** - High-performance vector database for AI applications
 - 🧪 **Test App** - Simple nginx test application
 
 ## How to Use This App Store
@@ -43,6 +44,7 @@ runtipi-appstore/
 │   │       └── logo.jpg
 │   ├── filebrowser-fixed/
 │   ├── supabase/
+│   ├── qdrant/
 │   └── testapp/
 ├── tests/
 │   └── apps.test.ts

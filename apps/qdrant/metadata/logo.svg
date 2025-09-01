@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="#DC2C2C"/>
+  
+  <!-- Q Letter stylized as vectors/nodes -->
+  <g transform="translate(256, 256)">
+    <!-- Main Q shape -->
+    <circle cx="0" cy="-40" r="120" fill="none" stroke="white" stroke-width="24"/>
+    <line x1="60" y1="60" x2="120" y2="120" stroke="white" stroke-width="24" stroke-linecap="round"/>
+    
+    <!-- Vector nodes representing database -->
+    <circle cx="-80" cy="-80" r="12" fill="white"/>
+    <circle cx="80" cy="-80" r="12" fill="white"/>
+    <circle cx="-80" cy="40" r="12" fill="white"/>
+    <circle cx="80" cy="40" r="12" fill="white"/>
+    <circle cx="0" cy="-120" r="12" fill="white"/>
+    <circle cx="0" cy="80" r="12" fill="white"/>
+    
+    <!-- Connecting lines representing vectors -->
+    <line x1="-80" y1="-80" x2="0" y2="-120" stroke="white" stroke-width="2" opacity="0.5"/>
+    <line x1="80" y1="-80" x2="0" y2="-120" stroke="white" stroke-width="2" opacity="0.5"/>
+    <line x1="-80" y1="40" x2="0" y2="80" stroke="white" stroke-width="2" opacity="0.5"/>
+    <line x1="80" y1="40" x2="0" y2="80" stroke="white" stroke-width="2" opacity="0.5"/>
+    <line x1="-80" y1="-80" x2="-80" y2="40" stroke="white" stroke-width="2" opacity="0.5"/>
+    <line x1="80" y1="-80" x2="80" y2="40" stroke="white" stroke-width="2" opacity="0.5"/>
+  </g>
+</svg>
